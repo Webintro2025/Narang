@@ -31,7 +31,7 @@ const WhyChooseUs = () => {
               Why Choose <span className="text-[#FFD600]">Narang Steel</span>?
             </h2>
             <p className="text-xs sm:text-base md:text-lg text-[#3F6165] max-w-3xl mx-auto leading-relaxed">
-              Discover what makes us the <span className="text-[#FFD600] font-semibold">preferred choice</span> for businesses seeking premium packaging solutions
+              Discover what makes us the <span className="text-[#FFD600] font-semibold">preferred choice</span> for businesses seeking premium Steel solutions
             </p>
             <div className="flex justify-center items-center gap-2 mt-4 sm:mt-6">
               <div className="w-6 sm:w-8 h-0.5 bg-[#3F6165]"></div>
