@@ -13,9 +13,9 @@ const images = [
   
   { src: '/Mild steel bright bars.jpg', alt: 'Mild Steel Bright Bars', slug: 'mild-steel-bright-bars', title: 'Mild Steel Bright Bars' },
   { src: '/Ms bright hex bar.jpg', alt: 'MS Bright Hex Bar', slug: 'ms-bright-hex-bar', title: 'MS Bright Hex Bar' },
-  { src: '/Ms bright Round bars.png', alt: 'MS Bright Round Bars', slug: 'ms-bright-round-bars', title: 'MS Bright Round Bars' },
-  { src: '/Ms bright square bar.png', alt: 'MS Bright Square Bar', slug: 'ms-bright-square-bar', title: 'MS Bright Square Bar' },
-  { src: '/Ms wire coils.png', alt: 'MS Wire Coils', slug: 'ms-wire-coils', title: 'MS Wire Coils' },
+  { src: '/Ms Bright Round Bars.png', alt: 'MS Bright Round Bars', slug: 'ms-bright-round-bars', title: 'MS Bright Round Bars' },
+  { src: '/Ms Bright Square Bar.png', alt: 'MS Bright Square Bar', slug: 'ms-bright-square-bar', title: 'MS Bright Square Bar' },
+  { src: '/Ms Wire Coils.png', alt: 'MS Wire Coils', slug: 'ms-wire-coils', title: 'MS Wire Coils' },
 { src: '/Ms wire rods.png', alt: 'MS Wire Rods', slug: 'ms-wire-rods', title: 'MS Wire Rods' },
 ];
 

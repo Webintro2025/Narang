@@ -132,7 +132,7 @@ export const bagsContent = [
       "Diameter: Customizable",
       "Finish: Bright"
     ],
-    image: "/Ms bright Round bars.png"
+    image: "/Ms Bright Round Bars.png"
   },
   {
     title: "MS Bright Square Bar",
@@ -147,7 +147,7 @@ export const bagsContent = [
       "Shape: Square",
       "Size: Customizable"
     ],
-    image: "/Ms bright square bar.png"
+    image: "/Ms Bright Square Bar.png"
   },
   {
     title: "MS Wire Coils",
@@ -162,7 +162,7 @@ export const bagsContent = [
       "Diameter: Customizable",
       "Coil weight: Customizable"
     ],
-    image: "/Ms wire coils.png"
+    image: "/Ms Wire Coils.png"
   },
   {
     title: "MS Wire Rods",
