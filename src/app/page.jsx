@@ -14,11 +14,11 @@ export default function Home() {
   return (
  <>
 <HomeBanner />
-
+<About />
 <Gallery />
 <WhatWeDo />
 <WhyCHooseUs />
-<About />
+
 <GetInTouch />
 <Maps />
 
