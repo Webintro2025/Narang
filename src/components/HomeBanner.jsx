@@ -36,7 +36,7 @@ const HomeBanner = () => {
   const banners = isMobile ? mobileBanners : desktopBanners;
 
   return (
-    <div className="relative w-full mt-16 sm:mt-24 overflow-hidden" style={{ minHeight: '220px', maxHeight: '480px', height: '40vw', maxHeight: 480 }}>
+  <div className="relative w-full mt-24 sm:mt-28 overflow-hidden" style={{ minHeight: '220px', maxHeight: '480px', height: '40vw', maxHeight: 480 }}>
       {banners.map((src, i) => (
         <img
           key={src}

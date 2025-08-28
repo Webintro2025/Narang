@@ -37,10 +37,10 @@ const Navbar = () => {
             <Link href="/" className="flex items-center gap-2">
               <img
                 alt="Blue and dark blue stylized S logo"
-                height="90"
-                width="90"
+                height="60"
+                width="60"
                 src="/logo.jpg"
-                className="w-[90px] h-[90px] object-contain md:w-[70px] md:h-[70px] cursor-pointer"
+                className="w-[60px] h-[60px] object-contain md:w-[70px] md:h-[70px] cursor-pointer"
               />
               <span aria-label="Narang Packaging text logo" className="font-bold text-lg sm:text-xl md:text-2xl text-[#3F6165] select-none cursor-pointer">
                 NARANG
