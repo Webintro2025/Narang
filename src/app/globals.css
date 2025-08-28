@@ -1,0 +1,23 @@
+/* Custom scrollbar for services list in footer - Modern look */
+.custom-scrollbar {
+	scrollbar-width: thin;
+	scrollbar-color: #FFD600 #23272b;
+}
+.custom-scrollbar::-webkit-scrollbar {
+	width: 10px;
+	background: #23272b;
+	border-radius: 12px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+	background: #FFD600;
+	border-radius: 12px;
+	border: 2px solid #3F6165;
+	min-height: 32px;
+	box-shadow: 0 2px 8px #FFD60044;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+	background: #ffe066;
+	border: 2px solid #FFD600;
+}
+
+@import "tailwindcss";
