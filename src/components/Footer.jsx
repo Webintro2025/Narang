@@ -1,16 +1,39 @@
+"use client";
 import React from 'react';
 import Link from 'next/link';
+import { motion } from 'framer-motion';
+
+const containerVariants = {
+  hidden: { opacity: 0, y: 40 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.35, ease: 'easeOut' } },
+};
+
+const columnVariants = {
+  hidden: { opacity: 0, y: 30 },
+  visible: (i = 0) => ({ opacity: 1, y: 0, transition: { duration: 0.25, ease: 'easeOut', delay: i * 0.06 } }),
+};
+
+const bottomBarVariants = {
+  hidden: { opacity: 0 },
+  visible: { opacity: 1, transition: { duration: 0.3, ease: 'easeOut', delay: 0.15 } },
+};
 
 const Footer = () => {
   return (
-  <footer className="bg-gradient-to-br from-[#1B2A2D] via-[#3F6165] to-[#11181A] text-white">
+    <motion.footer
+      className="bg-gradient-to-br from-[#1B2A2D] via-[#3F6165] to-[#11181A] text-white"
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.3 }}
+      variants={containerVariants}
+    >
       {/* Main Footer Content */}
       <div className="max-w-7xl mx-auto px-6 py-8">
         <div className="flex flex-col space-y-6 lg:grid lg:grid-cols-4 lg:gap-8 lg:space-y-0">
           
           {/* Company Information */}
-          <div className="lg:col-span-1">
-            <div className="mb-4">
+          <motion.div className="lg:col-span-1" variants={columnVariants} custom={0}>
+            <motion.div className="mb-4" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0, transition: { duration: 0.28, ease: 'easeOut' } }} viewport={{ once: true, amount: 0.35 }}>
               <Link href="/">
                 <h1 className="text-2xl font-bold text-white mb-2 cursor-pointer" style={{ fontFamily: 'Montserrat, sans-serif' }}>
                   Narang Steel
@@ -24,13 +47,13 @@ const Footer = () => {
                 GST: 07AKKPN9650P1Z8<br/>
                 Email: sahilnarang111@gmail.com
               </p>
-            </div>
-          </div>
+            </motion.div>
+          </motion.div>
 
           {/* Services and Quick Links - Side by Side on Mobile */}
-          <div className="grid grid-cols-2 gap-4 lg:contents">
+          <motion.div className="grid grid-cols-2 gap-4 lg:contents" variants={columnVariants} custom={1}>
             {/* Services */}
-            <div>
+            <motion.div initial={{ opacity: 0, y: 22 }} whileInView={{ opacity: 1, y: 0, transition: { duration: 0.24, ease: 'easeOut', delay: 0.04 } }} viewport={{ once: true, amount: 0.3 }}>
               <h3 className="text-sm sm:text-base lg:text-lg font-semibold text-white mb-1">
                 Our Services
               </h3>
@@ -49,10 +72,10 @@ const Footer = () => {
                 <li><Link href="/products/ms-wire-coils" className="hover:text-[#FFD600] cursor-pointer transition-colors">MS Wire Coils</Link></li>
                 <li><Link href="/products/ms-wire-rods" className="hover:text-[#FFD600] cursor-pointer transition-colors">MS Wire Rods</Link></li>
               </ul>
-            </div>
+            </motion.div>
 
             {/* Quick Links */}
-            <div>
+            <motion.div initial={{ opacity: 0, y: 22 }} whileInView={{ opacity: 1, y: 0, transition: { duration: 0.24, ease: 'easeOut', delay: 0.08 } }} viewport={{ once: true, amount: 0.3 }}>
               <h3 className="text-sm sm:text-base lg:text-lg font-semibold text-white mb-1">
                 Quick Links
               </h3>
@@ -62,13 +85,13 @@ const Footer = () => {
                 <li><Link href="/about" className="hover:text-[#FFD600] cursor-pointer transition-colors">About Us</Link></li>
                 <li><Link href="/contact" className="hover:text-[#FFD600] cursor-pointer transition-colors">Contact Us</Link></li>
               </ul>
-            </div>
-          </div>
+            </motion.div>
+          </motion.div>
 
           {/* Contact Info and Follow Us - Side by Side on Mobile */}
-          <div className="grid grid-cols-2 gap-4 lg:block">
+          <motion.div className="grid grid-cols-2 gap-4 lg:block" variants={columnVariants} custom={2}>
             {/* Contact Information */}
-            <div>
+            <motion.div initial={{ opacity: 0, y: 22 }} whileInView={{ opacity: 1, y: 0, transition: { duration: 0.24, ease: 'easeOut', delay: 0.1 } }} viewport={{ once: true, amount: 0.3 }}>
               <h3 className="text-sm sm:text-base lg:text-lg font-semibold text-white mb-1">
                 Contact Info
               </h3>
@@ -101,7 +124,7 @@ const Footer = () => {
               </div>
               
               {/* Follow Us - Below Contact Info on Desktop Only */}
-              <div className="hidden lg:block mt-6 lg:mt-8">
+              <motion.div className="hidden lg:block mt-6 lg:mt-8" initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0, transition: { duration: 0.22, ease: 'easeOut', delay: 0.12 } }} viewport={{ once: true, amount: 0.3 }}>
                 <h3 className="text-sm sm:text-base lg:text-lg font-semibold text-white mb-1">
                   Follow Us
                 </h3>
@@ -125,11 +148,11 @@ const Footer = () => {
                     </svg>
                   </a>
                 </div>
-              </div>
-            </div>
+              </motion.div>
+            </motion.div>
 
             {/* Follow Us - Mobile/Tablet Side by Side */}
-            <div className="lg:hidden">
+            <motion.div className="lg:hidden" initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0, transition: { duration: 0.22, ease: 'easeOut', delay: 0.12 } }} viewport={{ once: true, amount: 0.3 }}>
               <h3 className="text-sm sm:text-base font-semibold text-white mb-1">
                 Follow Us
               </h3>
@@ -156,13 +179,13 @@ const Footer = () => {
                   </svg>
                 </a>
               </div>
-            </div>
-          </div>
+            </motion.div>
+          </motion.div>
         </div>
       </div>
 
       {/* Bottom Bar */}
-  <div className="border-t border-[#1B2A2D] bg-[#1B2A2D]">
+      <motion.div className="border-t border-[#1B2A2D] bg-[#1B2A2D]" variants={bottomBarVariants}>
         <div className="max-w-7xl mx-auto px-6 py-4">
           <div className="flex flex-col md:flex-row justify-between items-center text-xs md:text-sm">
             <div className="text-gray-400 mb-2 md:mb-0 text-center md:text-left">
@@ -184,8 +207,8 @@ const Footer = () => {
             </div>
           </div>
         </div>
-      </div>
-    </footer>
+      </motion.div>
+    </motion.footer>
   );
 };
 

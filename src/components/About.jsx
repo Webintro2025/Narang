@@ -1,9 +1,9 @@
 
 const About = () => {
   return (
-  <div className="w-full px-0 py-8 sm:py-10">
+  <div className="w-full px-0  ">
       {/* Technology Section */}
-      <section className="flex flex-col md:flex-row flex-wrap justify-between items-center mb-10 md:mb-10 w-full px-2 sm:px-5 md:px-12">
+      <section className="flex flex-col md:flex-row flex-wrap pt-10 bg-green-50 justify-between items-center pb-10 md:pb-10 w-full px-2 sm:px-5 md:px-12">
         <div className="flex-1 min-w-[220px] max-w-[700px] px-0">
           <h2 className="italic font-bold text-lg sm:text-xl md:text-3xl underline mb-3 sm:mb-5">
             <em>
@@ -35,7 +35,7 @@ const About = () => {
         </div>
         <div className="flex-1 min-w-[180px] max-w-[700px] px-0 mt-6 md:mt-0 flex justify-center md:justify-end w-full">
           <img
-            src="/Mild steel bright bars.jpg"
+            src="/Brass sheets.jpg"
             alt="Large industrial packaging machine with white and blue parts on a light gradient background"
             className="w-[90vw] max-w-[350px] sm:max-w-[400px] md:max-w-full h-auto object-contain rounded-lg shadow-md"
             width={350}
@@ -45,10 +45,10 @@ const About = () => {
       </section>
 
       {/* Sustainability Section */}
-  <section className="flex flex-col-reverse md:flex-row flex-wrap justify-between items-center mb-10 md:mb-10 w-full px-2 sm:px-5 md:px-12 bg-yellow-50 rounded-xl py-6 sm:py-8">
+  <section className="flex flex-col-reverse md:flex-row flex-wrap justify-between items-center pb-10 pd:mb-10 w-full px-2 sm:px-5 md:px-12 bg-yellow-50 rounded-xl py-6 sm:py-8">
         <div className="flex-1 min-w-[120px] max-w-[400px] px-0 mt-6 md:mt-0 flex justify-center md:justify-start w-full">
           <img
-            src="/brasspipe.png"
+            src="/brassflat.jpg"
             alt="Hands holding small green plant seedling with soil and blurred green background"
             className="w-[80vw] max-w-[300px] sm:max-w-[350px] md:max-w-full object-contain rounded-lg shadow-md mx-auto"
             width={300}

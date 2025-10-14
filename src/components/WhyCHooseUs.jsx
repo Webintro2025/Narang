@@ -1,3 +1,22 @@
+'use client';
+
+import { motion } from 'framer-motion';
+
+const headingVariants = {
+  hidden: { opacity: 0, y: -40 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.35, ease: 'easeOut', delay: 0.05 } },
+};
+
+const listVariants = {
+  hidden: { opacity: 0, y: 30 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.3, ease: 'easeOut' } },
+};
+
+const pulseVariants = {
+  hidden: { opacity: 0, scale: 0.9 },
+  visible: { opacity: 1, scale: 1, transition: { duration: 0.35, ease: 'easeOut', delay: 0.08 } },
+};
+
 const WhyChooseUs = () => {
   const features = [
     { id: 1, title: 'Brass Sheets', description: 'High-quality brass sheets for industrial and decorative use.', color: '#3F6165' },
@@ -16,12 +35,21 @@ const WhyChooseUs = () => {
 
   return (
     <>
-  <div className="py-10 md:py-16 bg-yellow-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+  <motion.section
+        className="py-10 md:py-16 bg-yellow-50"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.25 }}
+        variants={headingVariants}
+      >
+        <motion.div
+          className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative"
+          variants={headingVariants}
+        >
           {/* Header */}
-          <div className="text-center mb-8 sm:mb-10">
+          <motion.div className="text-center mb-8 sm:mb-10" variants={headingVariants}>
             <div className="inline-block mb-3 sm:mb-4">
-              <div className="bg-yellow-200 rounded-full px-4 sm:px-6 py-1.5 sm:py-2 border-2 border-[#3F6165]/30">
+              <div className="bg-gray-50  rounded-full px-4 sm:px-6 py-1.5 sm:py-2 border-2 border-[#3F6165]/30">
                 <span className="text-[#3F6165] font-bold text-xs sm:text-sm uppercase tracking-wide">
                   Why Choose Us
                 </span>
@@ -40,29 +68,48 @@ const WhyChooseUs = () => {
               <div className="w-2 h-2 bg-[#FFD600] rounded-full"></div>
               <div className="w-6 sm:w-8 h-0.5 bg-[#3F6165]"></div>
             </div>
-          </div>
-          {/* Features Grid - Mobile: 2 per row, Tablet: 2 per row, Desktop: 3 per row */}
-          <div className="grid grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-6">
-            {features.map((feature) => (
-              <div
-                key={feature.id}
-                className="bg-white rounded-xl border-2 border-black p-3 sm:p-6 flex flex-col items-center"
-                style={{ boxShadow: '0 2px 8px 0 #e0e0e0' }}
-              >
-                <h4 className="text-xs sm:text-base md:text-lg font-bold text-[#3F6165] mb-1 sm:mb-2 text-center">
-                  {feature.title}
-                </h4>
-                <p className="text-xs sm:text-sm md:text-base text-[#3F6165] text-center leading-relaxed">
-                  {feature.description}
-                </p>
-                <div className="mt-2 sm:mt-3 h-1 w-8 sm:w-12 rounded-full" style={{backgroundColor: 'black'}}></div>
-              </div>
-            ))}
-          </div>
+          </motion.div>
+          <motion.div
+            className="bg-white/80 border-2 border-black rounded-2xl p-4 sm:p-6 shadow-md"
+            variants={pulseVariants}
+          >
+            <ul className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-5 md:gap-6">
+              {features.map((feature, index) => (
+                <motion.li
+                  key={feature.id}
+                  className="flex items-start gap-3 sm:gap-4"
+                  initial={{ opacity: 0, x: index % 2 === 0 ? -40 : 40 }}
+                  whileInView={{ opacity: 1, x: 0, transition: { duration: 0.3, ease: 'easeOut', delay: index * 0.03 } }}
+                  viewport={{ once: true, amount: 0.35 }}
+                >
+                  <span
+                    className="mt-1 sm:mt-1.5 inline-flex h-2.5 w-2.5 sm:h-3 sm:w-3 rounded-full flex-shrink-0"
+                    style={{ backgroundColor: feature.color }}
+                  ></span>
+                  <div>
+                    <h4 className="text-sm sm:text-base md:text-lg font-semibold text-[#3F6165] tracking-tight">
+                      {feature.title}
+                    </h4>
+                    <p className="text-xs sm:text-sm md:text-base text-[#3F6165]/80 leading-relaxed">
+                      {feature.description}
+                    </p>
+                  </div>
+                </motion.li>
+              ))}
+            </ul>
+          </motion.div>
           
           {/* CTA Section */}
-          <div className="text-center mt-8 sm:mt-12">
-            <div className="bg-yellow-100 rounded-xl p-4 sm:p-8 text-black border-2 border-[#3F6165]">
+          <motion.div
+            className="text-center mt-8 sm:mt-12"
+            variants={listVariants}
+          >
+            <motion.div
+              className="bg-yellow-50 rounded-xl p-4 sm:p-8 text-black border-2 border-[#3F6165]"
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0, transition: { duration: 0.35, ease: 'easeOut', delay: 0.05 } }}
+              viewport={{ once: true, amount: 0.35 }}
+            >
               <h3 className="text-base sm:text-2xl font-bold mb-2 sm:mb-3">Ready to Experience Excellence?</h3>
               <p className="text-xs sm:text-base mb-4 sm:mb-6 max-w-2xl mx-auto">
                 Join thousands of satisfied customers who trust us for their packaging needs
@@ -83,10 +130,10 @@ const WhyChooseUs = () => {
                   Call Now
                 </a>
               </div>
-            </div>
-          </div>
-        </div>
-      </div>
+            </motion.div>
+          </motion.div>
+        </motion.div>
+      </motion.section>
     </>
   );
 };

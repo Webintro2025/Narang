@@ -1,5 +1,6 @@
 'use client';
 import React, { useEffect, useRef, useState } from 'react';
+import { motion } from 'framer-motion';
 
 const Maps = () => {
   const mapRef = useRef(null);
@@ -78,11 +79,22 @@ const Maps = () => {
   };
 
   return (
-    <div className="w-full mb-1.5 bg-yellow-50" style={{ minHeight: 400 }}>
-      <div className="mb-2 text-center font-semibold text-[#3F6165] text-xs sm:text-base md:text-lg">
+    <motion.div
+      className="w-full mb-1.5 bg-green-50"
+      style={{ minHeight: 400 }}
+      initial={{ opacity: 0, y: 40 }}
+      whileInView={{ opacity: 1, y: 0, transition: { duration: 0.35, ease: 'easeOut' } }}
+      viewport={{ once: true, amount: 0.3 }}
+    >
+      <motion.div
+        className="mb-2 text-center font-semibold text-[#3F6165] text-xs sm:text-base md:text-lg"
+        initial={{ opacity: 0, x: -30 }}
+        whileInView={{ opacity: 1, x: 0, transition: { duration: 0.3, ease: 'easeOut', delay: 0.05 } }}
+        viewport={{ once: true, amount: 0.3 }}
+      >
         Destination: {destinationAddress}
-      </div>
-      <div
+      </motion.div>
+      <motion.div
         ref={mapRef}
         style={{
           width: '100%',
@@ -90,16 +102,21 @@ const Maps = () => {
           borderRadius: 12,
           overflow: 'hidden',
         }}
+        initial={{ opacity: 0, scale: 0.95 }}
+        whileInView={{ opacity: 1, scale: 1, transition: { duration: 0.35, ease: 'easeOut', delay: 0.08 } }}
+        viewport={{ once: true, amount: 0.25 }}
       />
       <div className="text-center mt-4">
-        <button
+        <motion.button
           onClick={handleGetDirections}
-          className="bg-[#3F6165] hover:bg-yellow-400 text-black px-4 py-2 rounded shadow text-xs sm:text-base"
+          className="bg-[#3F6165] hover:bg-yellow-400 text-white hover:text-black px-4 py-2 rounded shadow text-xs sm:text-base"
+          whileTap={{ scale: 0.95 }}
+          whileHover={{ y: -2 }}
         >
           Get Directions
-        </button>
+        </motion.button>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

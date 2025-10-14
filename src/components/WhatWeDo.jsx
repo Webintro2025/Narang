@@ -1,5 +1,16 @@
 "use client";
-import React, { useState } from 'react';
+import React from 'react';
+import { motion } from 'framer-motion';
+
+const sectionVariants = {
+  hidden: { opacity: 0, y: 40 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.35, ease: 'easeOut' } },
+};
+
+const cardVariants = {
+  hidden: { opacity: 0, scale: 0.95 },
+  visible: { opacity: 1, scale: 1, transition: { duration: 0.28, ease: 'easeOut' } },
+};
 
 const WhatWeDo = () => {
   const services = [
@@ -66,23 +77,37 @@ const WhatWeDo = () => {
   ];
 
   return (
-  <div className="py-6 sm:py-8 bg-white">
+  <motion.section
+      className="py-6 sm:py-8 bg-green-50"
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.25 }}
+      variants={sectionVariants}
+    >
       <div className="max-w-7xl mx-auto px-2 sm:px-4 md:px-6 lg:px-8">
         {/* Header Section */}
-        <div className="text-center mb-6 sm:mb-8">
+        <motion.div
+          className="text-center mb-6 sm:mb-8"
+          initial={{ opacity: 0, y: -30 }}
+          whileInView={{ opacity: 1, y: 0, transition: { duration: 0.35, ease: 'easeOut', delay: 0.05 } }}
+          viewport={{ once: true, amount: 0.35 }}
+        >
           <h2 className="text-xl sm:text-2xl md:text-4xl font-bold text-[#3F6165] mb-1 sm:mb-2">What We Do</h2>
           <p className="text-xs sm:text-base md:text-lg text-[#3F6165] w-full mx-auto">
             At Narang Steel, we specialize in providing a wide range of premium metal products and machining solutions tailored for various industries. Our products are crafted to deliver precision, quality, and performance.
           </p>
-        </div>
+        </motion.div>
 
         {/* Services Grid */}
         <div className="grid grid-cols-2 gap-4 sm:gap-6">
-          {services.map((service) => (
-            <div
+          {services.map((service, index) => (
+            <motion.div
               key={service.id}
-              className="bg-white rounded-lg border-2 border-black p-3 sm:p-4"
+              className="bg-gray-50 rounded-lg border-2 border-black p-3 sm:p-4"
               style={{ boxShadow: '0 2px 8px 0 #e0e0e0' }}
+              initial={{ opacity: 0, x: index % 2 === 0 ? -40 : 40 }}
+              whileInView={{ opacity: 1, x: 0, transition: { duration: 0.25, ease: 'easeOut', delay: index * 0.02 } }}
+              viewport={{ once: true, amount: 0.4 }}
             >
               {/* Title */}
               <h3 className="text-base sm:text-lg font-semibold text-[#3F6165] mb-1 sm:mb-2">
@@ -94,13 +119,24 @@ const WhatWeDo = () => {
                   {service.description}
                 </p>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
 
         {/* Call to Action */}
-        <div className="text-center mt-6 sm:mt-8">
-          <div className="w-full bg-gradient-to-r from-[#3F6165] via-yellow-200 to-[#3F6165] rounded-lg shadow-lg p-4 sm:p-6">
+        <motion.div
+          className="text-center mt-6 sm:mt-8"
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0, transition: { duration: 0.3, ease: 'easeOut', delay: 0.05 } }}
+          viewport={{ once: true, amount: 0.3 }}
+        >
+          <motion.div
+            className="w-full bg-gradient-to-r from-[#3F6165] via-yellow-200 to-[#3F6165] rounded-lg shadow-lg p-4 sm:p-6"
+            variants={cardVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.3 }}
+          >
             <h3 className="text-lg sm:text-2xl font-bold text-black mb-2 sm:mb-3">
               Ready to Get Started?
             </h3>
@@ -110,10 +146,10 @@ const WhatWeDo = () => {
             <button className="bg-[#3F6165] text-yellow-300 px-6 sm:px-8 py-2 sm:py-3 rounded-lg font-semibold text-xs sm:text-base border-2 border-[#3F6165] hover:bg-yellow-400 hover:text-black transition-colors duration-200">
               Get in Touch
             </button>
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
       </div>
-    </div>
+    </motion.section>
   );
 };
 

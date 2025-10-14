@@ -1,5 +1,21 @@
 "use client";
 import { useState } from 'react';
+import { motion } from 'framer-motion';
+
+const containerVariants = {
+  hidden: { opacity: 0, y: 40 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.35, ease: 'easeOut' } },
+};
+
+const cardVariants = {
+  hidden: { opacity: 0, x: -40 },
+  visible: { opacity: 1, x: 0, transition: { duration: 0.3, ease: 'easeOut' } },
+};
+
+const formVariants = {
+  hidden: { opacity: 0, x: 40 },
+  visible: { opacity: 1, x: 0, transition: { duration: 0.3, ease: 'easeOut', delay: 0.05 } },
+};
 
 const GetInTouch = () => {
   const [formData, setFormData] = useState({
@@ -47,18 +63,33 @@ const GetInTouch = () => {
   };
 
   return (
-  <div className="min-h-[80vh] flex flex-col lg:flex-row items-center justify-center px-2 sm:px-6 md:px-10 pt-8 md:pt-14 lg:pb-0.5 md:pb-1.5 pb-3.5 bg-white relative overflow-hidden">
-      <div className="relative max-w-xl md:max-w-lg lg:max-w-xl z-10 w-full">
+  <motion.div
+      className="min-h-[80vh] flex flex-col lg:flex-row items-center justify-center px-2 sm:px-6 md:px-10 pt-8 md:pt-14 lg:pb-0.5 md:pb-1.5 pb-3.5 bg-gray-50 relative overflow-hidden"
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.2 }}
+      variants={containerVariants}
+    >
+      <motion.div
+        className="relative max-w-xl md:max-w-lg lg:max-w-xl z-10 w-full"
+        variants={cardVariants}
+      >
         <h1 className="text-lg sm:text-xl md:text-2xl font-serif mb-4 md:mb-6 leading-snug">
-          <span className="text-[#3F6165]">
+          <span className="text-black">
             Narang Steel
           </span>
-          <span className="text-[#3F6165]">
+          <span className="text-black">
             - Premium Steel Solutions
           </span>
         </h1>
         <div className="mt-6 md:mt-12 space-y-4 md:space-y-6 max-w-xl">
-          <div className="bg-yellow-100 p-3 sm:p-4 md:p-6 rounded-2xl border-l-4 border-[#3F6165] shadow-lg">
+          <motion.div
+            className="bg-yellow-50 p-3 sm:p-4 md:p-6 rounded-2xl border-l-4 border-[#3F6165] shadow-lg"
+            variants={cardVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.3 }}
+          >
             <div className="flex items-start space-x-3 sm:space-x-4">
               <div className="flex-shrink-0 w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 bg-[#3F6165] rounded-full flex items-center justify-center">
                 {/* Location icon */}
@@ -67,14 +98,20 @@ const GetInTouch = () => {
                 </svg>
               </div>
               <div>
-                <h3 className="text-[#3F6165] font-semibold text-xs sm:text-sm mb-0.5">Our Location</h3>
-                <p className="text-[#3F6165] text-xs sm:text-sm leading-relaxed">
+                <h3 className="text-black font-semibold text-xs sm:text-sm mb-0.5">Our Location</h3>
+                <p className="text-black text-xs sm:text-sm leading-relaxed">
                   Ground Floor, Wz-18, Khyala Village, Khayala Village, New Delhi-110018, Delhi, India
                 </p>
               </div>
             </div>
-          </div>
-          <div className="bg-yellow-100 p-3 sm:p-4 md:p-6 rounded-2xl border-l-4 border-[#3F6165] shadow-lg">
+          </motion.div>
+          <motion.div
+            className="bg-yellow-50 p-3 sm:p-4 md:p-6 rounded-2xl border-l-4 border-[#3F6165] shadow-lg"
+            variants={cardVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.3 }}
+          >
             <div className="flex items-center space-x-3 sm:space-x-4">
               <div className="flex-shrink-0 w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 bg-[#3F6165] rounded-full flex items-center justify-center">
                 {/* Phone icon */}
@@ -83,14 +120,20 @@ const GetInTouch = () => {
                 </svg>
               </div>
               <div>
-                <h3 className="text-[#3F6165] font-semibold text-xs sm:text-sm mb-0.5">Mobile Number</h3>
-                <a href="tel:9999081996" className="text-[#3F6165] text-xs sm:text-sm font-medium">
+                <h3 className="text-black font-semibold text-xs sm:text-sm mb-0.5">Mobile Number</h3>
+                <a href="tel:9999081996" className="text-black text-xs sm:text-sm font-medium">
                   9999081996
                 </a>
               </div>
             </div>
-          </div>
-          <div className="bg-yellow-100 p-3 sm:p-4 md:p-6 rounded-2xl border-l-4 border-[#3F6165] shadow-lg">
+          </motion.div>
+          <motion.div
+            className="bg-yellow-50 p-3 sm:p-4 md:p-6 rounded-2xl border-l-4 border-[#3F6165] shadow-lg"
+            variants={cardVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.3 }}
+          >
             <div className="flex items-center space-x-3 sm:space-x-4">
               <div className="flex-shrink-0 w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 bg-[#3F6165] rounded-full flex items-center justify-center">
                 {/* GST icon (use a document icon) */}
@@ -99,17 +142,21 @@ const GetInTouch = () => {
                 </svg>
               </div>
               <div>
-                <h3 className="text-[#3F6165] font-semibold text-xs sm:text-sm mb-0.5">GST Number</h3>
-                <span className="text-[#3F6165] text-xs sm:text-sm font-medium">07AKKPN9650P1Z8</span>
+                <h3 className="text-black font-semibold text-xs sm:text-sm mb-0.5">GST Number</h3>
+                <span className="text-black text-xs sm:text-sm font-medium">07AKKPN9650P1Z8</span>
               </div>
             </div>
-          </div>
+          </motion.div>
         </div>
-      </div>
-      <form 
+      </motion.div>
+      <motion.form 
         onSubmit={handleSubmit}
         aria-label="Get A Free Consultation Form" 
-  className="relative z-10 bg-yellow-100 rounded-3xl p-4 sm:p-6 md:p-8 mt-8 md:mt-12 lg:mt-0 lg:ml-8 md:ml-6 w-full max-w-md shadow-lg border border-[#3F6165]"
+  className="relative z-10 bg-yellow-50 rounded-3xl p-4 sm:p-6 md:p-8 mt-8 md:mt-12 lg:mt-0 lg:ml-8 md:ml-6 w-full max-w-md shadow-lg border border-[#3F6165]"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.25 }}
+        variants={formVariants}
       >
         <h2 className="text-center text-base sm:text-lg mb-4 sm:mb-6 font-serif text-black">
           Send Your Enquiry
@@ -150,7 +197,7 @@ const GetInTouch = () => {
           rows="4"
         />
         <button 
-          className="w-full bg-[#3F6165] hover:bg-yellow-400 text-black font-bold py-2.5 sm:py-3 rounded-full text-xs sm:text-base disabled:opacity-60" 
+          className="w-full bg-[#3F6165] hover:bg-yellow-400 text-white hover:text-black font-bold py-2.5 sm:py-3 rounded-full text-xs sm:text-base disabled:opacity-60" 
           type="submit"
           disabled={loading}
         >
@@ -158,8 +205,8 @@ const GetInTouch = () => {
         </button>
         {success && <p className="text-green-600 text-center mt-3 sm:mt-4 text-xs sm:text-base">{success}</p>}
         {error && <p className="text-red-600 text-center mt-3 sm:mt-4 text-xs sm:text-base">{error}</p>}
-      </form>
-    </div>
+      </motion.form>
+    </motion.div>
   );
 };
 

@@ -4,14 +4,33 @@ import React, { useRef, useState } from 'react';
 import { FaBars, FaTimes } from 'react-icons/fa';
 import Link from 'next/link';
 import { FaPhoneAlt, FaEnvelope, FaFacebookF, FaInstagram, FaTwitter, FaPinterestP, FaLinkedinIn, FaYoutube, FaWhatsapp } from 'react-icons/fa';
+import { motion } from 'framer-motion';
+
+const barVariants = {
+  hidden: { opacity: 0, y: -30 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.3, ease: 'easeOut' } },
+};
+
+const navVariants = {
+  hidden: { opacity: 0, y: -20 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.25, ease: 'easeOut', delay: 0.05 } },
+};
 
 const Navbar = () => {
   const [navOpen, setNavOpen] = useState(false);
   return (
     <>
-  <div className="fixed top-0 left-0 w-full z-50 shadow-md border-b border-yellow-400 bg-white">
+      <motion.div
+        className="fixed top-0 left-0 w-full z-50 shadow-md border-b border-yellow-400 bg-white"
+        initial="hidden"
+        animate="visible"
+        variants={barVariants}
+      >
         {/* Top bar */}
-  <div className="flex flex-col sm:flex-row items-center justify-between bg-[#3F6165] text-yellow-400 text-xs sm:text-sm px-2 sm:px-4 h-auto sm:h-8 py-1 sm:py-0 top-bar">
+        <motion.div
+          className="flex flex-col sm:flex-row items-center justify-between bg-[#3F6165] text-yellow-400 text-xs sm:text-sm px-2 sm:px-4 h-auto sm:h-8 py-1 sm:py-0 top-bar"
+          variants={navVariants}
+        >
           <div className="flex items-center gap-2 sm:gap-4 border-l-2 border-yellow-400 pl-2 w-full sm:w-auto justify-center sm:justify-start">
             <a href="tel:9999081996" className="flex items-center gap-1 text-yellow-400 hover:text-yellow-300">
               <FaPhoneAlt className="text-xs sm:text-sm" />
@@ -30,9 +49,12 @@ const Navbar = () => {
             <a aria-label="LinkedIn" href="#" className="text-yellow-400 text-xs sm:text-sm"><FaLinkedinIn /></a>
             <a aria-label="YouTube" href="#" className="text-yellow-400 text-xs sm:text-sm"><FaYoutube /></a>
           </div>
-        </div>
+        </motion.div>
         {/* Main nav */}
-  <header className="flex flex-col md:flex-row items-center justify-between px-2 sm:px-4 py-2 bg-white gap-2 md:gap-0 relative">
+        <motion.header
+          className="flex flex-col md:flex-row items-center justify-between px-2 sm:px-4 py-2 bg-gray-50 gap-2 md:gap-0 relative"
+          variants={navVariants}
+        >
           <div aria-label="Narang Steel logo" className="flex items-center gap-2 pl-0 sm:pl-4 w-full md:w-auto justify-center md:justify-start">
             <Link href="/" className="flex items-center gap-2">
               <img
@@ -185,8 +207,8 @@ const Navbar = () => {
               </button>
             </a>
           </div>
-        </header>
-      </div>
+        </motion.header>
+      </motion.div>
     </>
   );
 };
