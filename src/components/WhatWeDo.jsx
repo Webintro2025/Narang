@@ -67,7 +67,7 @@ const WhatWeDo = () => {
     {
       id: 11,
       title: 'MS Wire Coils',
-      description: 'MS Wire Coils are produced from high-quality mild steel, offering flexibility, strength, and durability. Used extensively in binding, fencing, and reinforcement, these coils are available in various gauges to suit different industrial needs. Their uniformity and resilience make them a reliable choice for demanding applications.'
+      description: 'MS Wire Coils are produced from high-quality mild steel, offering flexibility, strength, and durability. Used extensively in binding, bending, and reinforcement, these coils are available in various gauges to suit different industrial needs. Their uniformity and resilience make them a reliable choice for demanding applications.'
     },
     {
       id: 12,
@@ -78,7 +78,7 @@ const WhatWeDo = () => {
 
   return (
   <motion.section
-      className="py-6 sm:py-8 bg-green-50"
+      className="py-6 sm:py-8 bg-gradient-to-br from-[#567f85] via-[#fee27a] to-[#567f85] text-white"
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, amount: 0.25 }}
@@ -92,8 +92,8 @@ const WhatWeDo = () => {
           whileInView={{ opacity: 1, y: 0, transition: { duration: 0.35, ease: 'easeOut', delay: 0.05 } }}
           viewport={{ once: true, amount: 0.35 }}
         >
-          <h2 className="text-xl sm:text-2xl md:text-4xl font-bold text-[#3F6165] mb-1 sm:mb-2">What We Do</h2>
-          <p className="text-xs sm:text-base md:text-lg text-[#3F6165] w-full mx-auto">
+          <h2 className="text-xl sm:text-2xl md:text-4xl font-bold text-white mb-1 sm:mb-2">What We Do</h2>
+          <p className="text-xs sm:text-base md:text-lg text-white/90 w-full mx-auto">
             At Narang Steel, we specialize in providing a wide range of premium metal products and machining solutions tailored for various industries. Our products are crafted to deliver precision, quality, and performance.
           </p>
         </motion.div>
@@ -103,8 +103,7 @@ const WhatWeDo = () => {
           {services.map((service, index) => (
             <motion.div
               key={service.id}
-              className="bg-gray-50 rounded-lg border-2 border-black p-3 sm:p-4"
-              style={{ boxShadow: '0 2px 8px 0 #e0e0e0' }}
+              className="bg-white/90 rounded-lg border border-white/40 p-3 sm:p-4 shadow-lg"
               initial={{ opacity: 0, x: index % 2 === 0 ? -40 : 40 }}
               whileInView={{ opacity: 1, x: 0, transition: { duration: 0.25, ease: 'easeOut', delay: index * 0.02 } }}
               viewport={{ once: true, amount: 0.4 }}
@@ -131,7 +130,7 @@ const WhatWeDo = () => {
           viewport={{ once: true, amount: 0.3 }}
         >
           <motion.div
-            className="w-full bg-gradient-to-r from-[#3F6165] via-yellow-200 to-[#3F6165] rounded-lg shadow-lg p-4 sm:p-6"
+            className="w-full bg-white/85 text-[#3F6165] rounded-lg shadow-lg p-4 sm:p-6"
             variants={cardVariants}
             initial="hidden"
             whileInView="visible"

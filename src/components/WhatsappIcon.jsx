@@ -4,7 +4,7 @@ import React from 'react'
 const WhatsappIcon = () => {
   return (
     <a
-  href="https://wa.me/9999081996"
+  href="https://wa.me/ 9999601996"
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Chat on WhatsApp"

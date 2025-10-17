@@ -41,11 +41,7 @@ const Gallery = () => {
 
   useEffect(() => {
     const updateImages = () => {
-      if (window.innerWidth >= 1024) {
-        setVisibleImages(images);
-      } else {
-        setVisibleImages(images.slice(0, images.length - 1));
-      }
+      setVisibleImages(images);
     };
     updateImages();
     window.addEventListener('resize', updateImages);

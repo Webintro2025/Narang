@@ -29,7 +29,7 @@ const WhyChooseUs = () => {
     { id: 8, title: 'MS Bright Hex Bar', description: 'Uniform MS bright hex bars for fasteners and bolts.', color: '#D01364' },
     { id: 9, title: 'MS Bright Round Bars', description: 'High-strength MS bright round bars for engineering needs.', color: '#3F6165' },
     { id: 10, title: 'MS Bright Square Bar', description: 'Straight and smooth MS bright square bars for fabrication.', color: '#D01364' },
-    { id: 11, title: 'MS Wire Coils', description: 'Flexible and durable MS wire coils for binding and fencing.', color: '#3F6165' },
+    { id: 11, title: 'MS Wire Coils', description: 'Flexible and durable MS wire coils for binding and bending.', color: '#3F6165' },
     { id: 12, title: 'MS Wire Rods', description: 'Consistent MS wire rods for fasteners and springs.', color: '#D01364' },
   ];
 
@@ -116,7 +116,7 @@ const WhyChooseUs = () => {
               </p>
               <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
                 <a
-                  href="https://wa.me/9999081996"
+                  href="https://wa.me/ 9999601996"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 bg-[#3F6165] text-yellow-300 border-2 border-[#3F6165] font-bold px-4 sm:px-6 py-2 sm:py-3 rounded-full text-xs sm:text-base hover:bg-yellow-400 hover:text-black transition-colors duration-200"
@@ -124,7 +124,7 @@ const WhyChooseUs = () => {
                   Get Started Today
                 </a>
                 <a
-                  href="tel:9999081996"
+                  href="tel: 9999601996"
                   className="inline-flex items-center gap-2 border-2 border-[#3F6165] text-black font-bold px-4 sm:px-6 py-2 sm:py-3 rounded-full text-xs sm:text-base hover:bg-yellow-400 hover:text-black transition-colors duration-200"
                 >
                   Call Now

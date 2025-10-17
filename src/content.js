@@ -151,11 +151,11 @@ export const bagsContent = [
   },
   {
     title: "MS Wire Coils",
-  description: "MS Wire Coils from our product line are engineered for flexibility, durability, and strength, making them ideal for binding, fencing, and reinforcement applications. Manufactured from high-quality mild steel, these wire coils offer excellent tensile strength and resistance to breaking under stress. Their flexibility allows for easy handling and installation, whether you are securing construction materials, creating fencing, or reinforcing concrete structures. The smooth surface of our wire coils ensures minimal friction and easy unwinding during use. They are available in various diameters and coil weights to suit different project requirements. MS wire coils are also used in the production of nails, wire products, and industrial fasteners. Their consistent quality and performance make them a trusted choice for builders, contractors, and manufacturers seeking reliable solutions for demanding tasks. Choose our MS wire coils for superior strength, versatility, and ease of use in every application.",
+  description: "MS Wire Coils from our product line are engineered for flexibility, durability, and strength, making them ideal for binding, bending, and reinforcement applications. Manufactured from high-quality mild steel, these wire coils offer excellent tensile strength and resistance to breaking under stress. Their flexibility allows for easy handling and installation, whether you are securing construction materials, creating bending, or reinforcing concrete structures. The smooth surface of our wire coils ensures minimal friction and easy unwinding during use. They are available in various diameters and coil weights to suit different project requirements. MS wire coils are also used in the production of nails, wire products, and industrial fasteners. Their consistent quality and performance make them a trusted choice for builders, contractors, and manufacturers seeking reliable solutions for demanding tasks. Choose our MS wire coils for superior strength, versatility, and ease of use in every application.",
     features: [
       "Flexible and durable",
       "High-quality steel",
-      "Ideal for binding and fencing"
+      "Ideal for binding and bending"
     ],
     technicalSpecifications: [
       "Material: Mild Steel",

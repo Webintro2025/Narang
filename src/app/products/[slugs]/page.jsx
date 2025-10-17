@@ -38,7 +38,7 @@ export default function ProductPage() {
   );
   if (!product) {
     return (
-      <div className=" flex flex-col items-center justify-center bg-green-50 ">
+      <div className=" flex flex-col items-center justify-center min-h-[60vh] bg-gradient-to-br from-gray-100 via-yellow-100 to-emerald-100">
         <h1 className="text-3xl font-bold text-[#3F6165] mb-4 animate-bounce">Product Not Found</h1>
         <Link href="/" className="text-yellow-500 underline hover:text-yellow-700 transition">Go Home</Link>
       </div>
@@ -47,7 +47,7 @@ export default function ProductPage() {
   return (
     <>
     <motion.section
-      className="w-full bg-gray-50 py-6 sm:py-8 md:py-10 px-0 mt-20 sm:mt-24"
+      className="w-full bg-gradient-to-br from-gray-100 via-yellow-50 to-emerald-100 py-6 sm:py-8 md:py-10 px-0 mt-20 sm:mt-24"
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, amount: 0.2 }}
@@ -89,7 +89,7 @@ export default function ProductPage() {
               />
             </motion.div>
             <motion.div
-              className="flex-1 bg-yellow-50 rounded-xl p-3 sm:p-6 shadow-sm flex flex-col min-h-[180px] sm:min-h-[220px] md:min-h-[260px]"
+              className="flex-1 bg-white/90 backdrop-blur-sm rounded-xl p-3 sm:p-6 shadow-sm flex flex-col min-h-[180px] sm:min-h-[220px] md:min-h-[260px] border border-white/60"
               variants={cardVariants}
               initial="hidden"
               whileInView="visible"

@@ -64,7 +64,7 @@ const GetInTouch = () => {
 
   return (
   <motion.div
-      className="min-h-[80vh] flex flex-col lg:flex-row items-center justify-center px-2 sm:px-6 md:px-10 pt-8 md:pt-14 lg:pb-0.5 md:pb-1.5 pb-3.5 bg-gray-50 relative overflow-hidden"
+      className="min-h-[80vh] flex flex-col lg:flex-row items-center justify-center px-2 sm:px-6 md:px-10 pt-8 md:pt-14 lg:pb-0.5 md:pb-1.5 pb-3.5 bg-gradient-to-br from-[#567f85] via-[#fee27a] to-[#567f85] relative overflow-hidden text-white"
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, amount: 0.2 }}
@@ -74,17 +74,17 @@ const GetInTouch = () => {
         className="relative max-w-xl md:max-w-lg lg:max-w-xl z-10 w-full"
         variants={cardVariants}
       >
-        <h1 className="text-lg sm:text-xl md:text-2xl font-serif mb-4 md:mb-6 leading-snug">
-          <span className="text-black">
+        <h1 className="text-lg sm:text-xl md:text-2xl font-serif mb-4 md:mb-6 leading-snug text-white">
+          <span className="text-white">
             Narang Steel
           </span>
-          <span className="text-black">
+          <span className="text-white/90">
             - Premium Steel Solutions
           </span>
         </h1>
         <div className="mt-6 md:mt-12 space-y-4 md:space-y-6 max-w-xl">
           <motion.div
-            className="bg-yellow-50 p-3 sm:p-4 md:p-6 rounded-2xl border-l-4 border-[#3F6165] shadow-lg"
+            className="bg-white/90 text-[#3F6165] p-3 sm:p-4 md:p-6 rounded-2xl border-l-4 border-[#567f85] shadow-lg"
             variants={cardVariants}
             initial="hidden"
             whileInView="visible"
@@ -98,15 +98,15 @@ const GetInTouch = () => {
                 </svg>
               </div>
               <div>
-                <h3 className="text-black font-semibold text-xs sm:text-sm mb-0.5">Our Location</h3>
-                <p className="text-black text-xs sm:text-sm leading-relaxed">
+                <h3 className="text-[#3F6165] font-semibold text-xs sm:text-sm mb-0.5">Our Location</h3>
+                <p className="text-[#3F6165] text-xs sm:text-sm leading-relaxed">
                   Ground Floor, Wz-18, Khyala Village, Khayala Village, New Delhi-110018, Delhi, India
                 </p>
               </div>
             </div>
           </motion.div>
           <motion.div
-            className="bg-yellow-50 p-3 sm:p-4 md:p-6 rounded-2xl border-l-4 border-[#3F6165] shadow-lg"
+            className="bg-white/90 text-[#3F6165] p-3 sm:p-4 md:p-6 rounded-2xl border-l-4 border-[#567f85] shadow-lg"
             variants={cardVariants}
             initial="hidden"
             whileInView="visible"
@@ -120,15 +120,15 @@ const GetInTouch = () => {
                 </svg>
               </div>
               <div>
-                <h3 className="text-black font-semibold text-xs sm:text-sm mb-0.5">Mobile Number</h3>
-                <a href="tel:9999081996" className="text-black text-xs sm:text-sm font-medium">
-                  9999081996
+                <h3 className="text-[#3F6165] font-semibold text-xs sm:text-sm mb-0.5">Mobile Number</h3>
+                <a href="tel: 9999601996" className="text-[#3F6165] text-xs sm:text-sm font-medium">
+                   9999601996
                 </a>
               </div>
             </div>
           </motion.div>
           <motion.div
-            className="bg-yellow-50 p-3 sm:p-4 md:p-6 rounded-2xl border-l-4 border-[#3F6165] shadow-lg"
+            className="bg-white/90 text-[#3F6165] p-3 sm:p-4 md:p-6 rounded-2xl border-l-4 border-[#567f85] shadow-lg"
             variants={cardVariants}
             initial="hidden"
             whileInView="visible"
@@ -142,8 +142,8 @@ const GetInTouch = () => {
                 </svg>
               </div>
               <div>
-                <h3 className="text-black font-semibold text-xs sm:text-sm mb-0.5">GST Number</h3>
-                <span className="text-black text-xs sm:text-sm font-medium">07AKKPN9650P1Z8</span>
+                <h3 className="text-[#3F6165] font-semibold text-xs sm:text-sm mb-0.5">GST Number</h3>
+                <span className="text-[#3F6165] text-xs sm:text-sm font-medium">07AKKPN9650P1Z8</span>
               </div>
             </div>
           </motion.div>
@@ -152,20 +152,20 @@ const GetInTouch = () => {
       <motion.form 
         onSubmit={handleSubmit}
         aria-label="Get A Free Consultation Form" 
-  className="relative z-10 bg-yellow-50 rounded-3xl p-4 sm:p-6 md:p-8 mt-8 md:mt-12 lg:mt-0 lg:ml-8 md:ml-6 w-full max-w-md shadow-lg border border-[#3F6165]"
+  className="relative z-10 bg-white/95 text-[#3F6165] rounded-3xl p-4 sm:p-6 md:p-8 mt-8 md:mt-12 lg:mt-0 lg:ml-8 md:ml-6 w-full max-w-md shadow-lg border border-white/60"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.25 }}
         variants={formVariants}
       >
-        <h2 className="text-center text-base sm:text-lg mb-4 sm:mb-6 font-serif text-black">
+  <h2 className="text-center text-base sm:text-lg mb-4 sm:mb-6 font-serif text-[#3F6165]">
           Send Your Enquiry
         </h2>
         <input 
           name="fullName"
           value={formData.fullName}
           onChange={handleInputChange}
-          className="w-full mb-3 sm:mb-4 px-3 sm:px-4 py-2.5 sm:py-3 rounded-xl border border-[#3F6165] text-xs sm:text-sm md:text-base text-black placeholder-black focus:outline-none focus:ring-2 focus:ring-yellow-400" 
+          className="w-full mb-3 sm:mb-4 px-3 sm:px-4 py-2.5 sm:py-3 rounded-xl border border-[#3F6165]/60 text-xs sm:text-sm md:text-base text-[#3F6165] placeholder-[#3F6165]/60 focus:outline-none focus:ring-2 focus:ring-[#fee27a]" 
           placeholder="Full Name" 
           type="text"
           required
@@ -174,7 +174,7 @@ const GetInTouch = () => {
           name="phoneNumber"
           value={formData.phoneNumber}
           onChange={handleInputChange}
-          className="w-full mb-3 sm:mb-4 px-3 sm:px-4 py-2.5 sm:py-3 rounded-xl border border-[#3F6165] text-xs sm:text-sm md:text-base text-black placeholder-black focus:outline-none focus:ring-2 focus:ring-yellow-400" 
+          className="w-full mb-3 sm:mb-4 px-3 sm:px-4 py-2.5 sm:py-3 rounded-xl border border-[#3F6165]/60 text-xs sm:text-sm md:text-base text-[#3F6165] placeholder-[#3F6165]/60 focus:outline-none focus:ring-2 focus:ring-[#fee27a]" 
           placeholder="Phone Number" 
           type="tel"
           required
@@ -183,7 +183,7 @@ const GetInTouch = () => {
           name="email"
           value={formData.email}
           onChange={handleInputChange}
-          className="w-full mb-3 sm:mb-4 px-3 sm:px-4 py-2.5 sm:py-3 rounded-xl border border-[#3F6165] text-xs sm:text-sm md:text-base text-black placeholder-black focus:outline-none focus:ring-2 focus:ring-yellow-400" 
+          className="w-full mb-3 sm:mb-4 px-3 sm:px-4 py-2.5 sm:py-3 rounded-xl border border-[#3F6165]/60 text-xs sm:text-sm md:text-base text-[#3F6165] placeholder-[#3F6165]/60 focus:outline-none focus:ring-2 focus:ring-[#fee27a]" 
           placeholder="sahilnarang111@gmail.com" 
           type="email"
           required
@@ -192,7 +192,7 @@ const GetInTouch = () => {
           name="message"
           value={formData.message}
           onChange={handleInputChange}
-          className="w-full mb-4 sm:mb-6 px-3 sm:px-4 py-2.5 sm:py-3 rounded-xl border border-[#3F6165] text-xs sm:text-sm md:text-base text-black placeholder-black resize-none focus:outline-none focus:ring-2 focus:ring-yellow-400" 
+          className="w-full mb-4 sm:mb-6 px-3 sm:px-4 py-2.5 sm:py-3 rounded-xl border border-[#3F6165]/60 text-xs sm:text-sm md:text-base text-[#3F6165] placeholder-[#3F6165]/60 resize-none focus:outline-none focus:ring-2 focus:ring-[#fee27a]" 
           placeholder="Your Message" 
           rows="4"
         />
