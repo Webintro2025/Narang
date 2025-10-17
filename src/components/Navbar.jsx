@@ -32,9 +32,9 @@ const Navbar = () => {
           variants={navVariants}
         >
           <div className="flex items-center gap-2 sm:gap-4 border-l-2 border-yellow-400 pl-2 w-full sm:w-auto justify-center sm:justify-start">
-            <a href="tel: 9999601996" className="flex items-center gap-1 text-yellow-400 hover:text-yellow-300">
+            <a href="tel:  9999601996, 9999081996" className="flex items-center gap-1 text-yellow-400 hover:text-yellow-300">
               <FaPhoneAlt className="text-xs sm:text-sm" />
-              <span className="inline"> 9999601996</span>
+              <span className="inline">  9999601996, 9999081996</span>
             </a>
             <a href="mailto:sahilnarang111@gmail.com" className="flex items-center gap-1 text-yellow-400 hover:text-yellow-300">
               <FaEnvelope className="text-xs sm:text-sm" />
@@ -184,7 +184,7 @@ const Navbar = () => {
             </Link>
             {/* WhatsApp icon and button for mobile/tablet nav - moved to last */}
             <a
-              href="https://wa.me/ 9999601996"
+              href="https://wa.me/  9999601996, 9999081996"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="WhatsApp"
@@ -196,7 +196,7 @@ const Navbar = () => {
           </nav>
           <div className="hidden md:flex items-center gap-2 w-full md:w-auto justify-center md:justify-end mt-2 md:mt-0">
             <a
-              href="https://wa.me/ 9999601996"
+              href="https://wa.me/  9999601996, 9999081996"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="WhatsApp"

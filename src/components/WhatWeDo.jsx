@@ -78,7 +78,7 @@ const WhatWeDo = () => {
 
   return (
   <motion.section
-      className="py-6 sm:py-8 bg-gradient-to-br from-[#567f85] via-[#fee27a] to-[#567f85] text-white"
+    className="py-6 sm:py-8 bg-gradient-to-br from-[#567f85] via-[#fee27a] to-[#567f85] text-white overflow-hidden"
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, amount: 0.25 }}

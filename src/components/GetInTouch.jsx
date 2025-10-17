@@ -79,7 +79,7 @@ const GetInTouch = () => {
             Narang Steel
           </span>
           <span className="text-white/90">
-            - Premium Steel Solutions
+            - Premium Steel And Metal Solutions
           </span>
         </h1>
         <div className="mt-6 md:mt-12 space-y-4 md:space-y-6 max-w-xl">
@@ -121,8 +121,8 @@ const GetInTouch = () => {
               </div>
               <div>
                 <h3 className="text-[#3F6165] font-semibold text-xs sm:text-sm mb-0.5">Mobile Number</h3>
-                <a href="tel: 9999601996" className="text-[#3F6165] text-xs sm:text-sm font-medium">
-                   9999601996
+                <a href="tel:  9999601996, 9999081996" className="text-[#3F6165] text-xs sm:text-sm font-medium">
+                    9999601996, 9999081996
                 </a>
               </div>
             </div>
