@@ -1,0 +1,30 @@
+
+// List of locations for APS Lab
+export const locations = [
+	'khyala-village',
+	'vishnu-garden',
+	'mayapuri',
+	'kirti-nagar',
+	'nagli-sakrawati',
+	'naraina',
+	'anand-parbat',
+	'chawri-bazaar',
+	'ajmeri-gate',
+	'paharganj',
+	'chandni-chowk',
+	'mangolpuri',
+	'sultanpuri',
+	'kirari',
+	'nangloi',
+	'mundka',
+	'bahadurgarh',
+	'bawana',
+	'sonipat',
+	'bhiwadi',
+	'gurgaon',
+	'imt-manesar',
+	'noida',
+	'wazirpur',
+	'udyog-nagar',
+	'okhla'
+];
