@@ -15,7 +15,7 @@ export async function GET() {
 
 const allUrls = [
     ...urls,
-    ...locations.map((loc) => `/in/${loc}`),
+    ...locations.map((loc) => `/${loc}`),
   ];
 
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?> 
