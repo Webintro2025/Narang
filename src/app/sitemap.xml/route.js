@@ -1,6 +1,6 @@
 // src/app/sitemap.xml/route.js
 import { locations } from "@/marketplace";
-const BASE_URL = 'https://chahatpackaging.in'; // or your Narang Steel domain
+const BASE_URL = 'https://narangsteel.in'; // or your Narang Steel domain
 
 export async function GET() {
   const urls = [
