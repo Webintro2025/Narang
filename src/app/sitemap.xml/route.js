@@ -7,7 +7,7 @@ export async function GET() {
     '/',
     '/about',
     '/contact',
-    '/products',      
+     
    
   ];
 
